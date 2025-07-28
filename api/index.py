@@ -1,7 +1,5 @@
-from flask import Flask
-
-app = Flask(__name__)
-
-@app.route('/')
-def hello():
-    return "Hello from Flask on Render!"
+def handler(request):
+    return {
+        "statusCode": 200,
+        "body": "Hello from Vercel Serverless Python Function"
+    }
