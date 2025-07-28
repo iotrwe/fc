@@ -1,9 +1,7 @@
-{
-  "version": 2,
-  "builds": [
-    { "src": "api/index.py", "use": "@vercel/python" }
-  ],
-  "routes": [
-    { "src": "/(.*)", "dest": "api/index.py" }
-  ]
-}
+name: flask-api
+type: service
+build:
+  dockerfile: false
+run:
+  command: python main.py
+  port: 8000
