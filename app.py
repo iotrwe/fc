@@ -1,0 +1,14 @@
+import json
+
+# البيانات الخاصة بك (قم بلصق JSON هنا كسلسلة نصية)
+json_data = '''
+{"data":{"payment_account":{"__typename":"BusinessPaymentAccount","allow_biz_stored_balance":false,"billing_payment_methods":[{"credential":{"__typename":"ExternalCreditCard","id":"Y3JlZGl0X2NhcmRfMjQwNDc0NjQ4MTgyNzY5MDQ=","__isPaymentCredential":"ExternalCreditCard","__isBillingPaymentMethod":"ExternalCreditCard","billing_icons":[{"uri":"https://static.xx.fbcdn.net/rsrc.php/v4/yS/r/0JUTUfH1O2l.png","scale":2,"height":40,"width":60}],"card_association_name":"\u0623\u0645\u064a\u0631\u064a\u0643\u0627\u0646 \u0625\u0643\u0633\u0628\u0631\u064a\u0633","expiry_month":"12","expiry_year":"2029","is_expired":false,"last_four_digits":"4508","is_network_tokenized":false,"linked_configs":{"count_up_to":0},"linked_accounts":{"count_up_to":0},"credential_id":"24047464818276904","invoicing_auto_payment_configs":{"count_up_to":0,"nodes":[]},"linked_ad_accounts":{"count_up_to":0,"nodes":[]},"linked_whatsapp_accounts":{"count_up_to":0,"nodes":[]},"credential_type":"CREDIT_CARD","needs_verification":false,"is_owned_by_business":true,"supports_recurring":true,"authorized_in":false},"usability":null,"is_ato_verifiable":null,"is_primary":null,"can_set_primary":null,"is_editable":null},{"credential":{"__typename":"ExternalCreditCard","id":"Y3JlZGl0X2NhcmRfMjQyMzM0MDAxMzMwMTY3MDk=","__isPaymentCredential":"ExternalCreditCard","__isBillingPaymentMethod":"ExternalCreditCard","billing_icons":[{"uri":"https://static.xx.fbcdn.net/rsrc.php/v4/yS/r/0JUTUfH1O2l.png","scale":2,"height":40,"width":60}],"card_association_name":"\u0623\u0645\u064a\u0631\u064a\u0643\u0627\u0646 \u0625\u0643\u0633\u0628\u0631\u064a\u0633","expiry_month":"12","expiry_year":"2027","is_expired":false,"last_four_digits":"3375","is_network_tokenized":false,"linked_configs":{"count_up_to":0},"linked_accounts":{"count_up_to":0},"credential_id":"24233400133016709","invoicing_auto_payment_configs":{"count_up_to":0,"nodes":[]},"linked_ad_accounts":{"count_up_to":0,"nodes":[]},"linked_whatsapp_accounts":{"count_up_to":0,"nodes":[]},"credential_type":"CREDIT_CARD","needs_verification":false,"is_owned_by_business":true,"supports_recurring":true,"authorized_in":false},"usability":null,"is_ato_verifiable":null,"is_primary":null,"can_set_primary":null,"is_editable":null}],"id":"1097675952425472"}},"extensions":{"server_metadata":{"request_start_time_ms":1753672716889,"time_at_flush_ms":1753672717319},"is_final":true}}'''
+
+# تحويل النص إلى كائن JSON
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def hello():
+    return "Hello from Flask on Render!"
